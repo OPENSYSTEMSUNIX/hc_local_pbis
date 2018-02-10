@@ -1,13 +1,10 @@
 ---
 # tasks file for pbis
-  - include: redhat.yml
-    when: ansible_os_family == 'RedHat'
-
-  - include: ubuntu.yml
-    when: ansible_os_family == 'Debian'
+  - name: Redhat | yum install pbis-open
+    yum: name=pbis-open state=latest
 
   - name: Check the Domain status
-    shell: /opt/pbis/bin/lsa get-status |grep Netbios |awk '{print $3}'
+    shell: /opt/pbis/bin/lsa get-status | grep Netbios | awk '{print $3}'
     register: domain_status
 
   - name: Join the machine if it is not already on the domain.
@@ -18,6 +15,6 @@
       - config pbis domain
       - config pbis homedirtemplate
       - config pbis userdomainprefix
-  
+
   - name: config pbis requiremembershipof
     command: /opt/pbis/bin/config RequireMembershipOf {{ require_membership_of }}

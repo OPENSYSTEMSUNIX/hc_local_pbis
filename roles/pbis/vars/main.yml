@@ -2,8 +2,8 @@
 # vars file for pbis
 
 # Domain settings / Account
-domain_fqdn: office.contoso.com
-domain_netbios: CONTOSO
+domain_fqdn: harlandclarke.local
+domain_netbios: HARLANDCLARKE
 domain_user: USERNAME
 domain_pass: PASSWORD
 
@@ -11,4 +11,4 @@ domain_pass: PASSWORD
 homedir_template: "%H/%U"
 login_shell_template: "/bin/bash"
 assume_default_domain: "True"
-require_membership_of: '"CONTOSO\\admins" "CONTOSO\\another-group"'
+require_membership_of: '"HARLANDCLARKE\\aix_admins" "HARLANDCLARKE\\another-group"'
