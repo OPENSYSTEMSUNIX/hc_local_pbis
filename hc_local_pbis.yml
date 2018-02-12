@@ -1,7 +1,10 @@
 ---
 
 # file: hc_local_pbis.yml
+ - include: ad_creds.yml
  - hosts: devops
    become: yes
+   vars:
+      requiremembershipof: "HARLANDCLARKE\\aix_admins" "HARLANDCLARKE\\aix_admin_val"
    roles:
        - pbis

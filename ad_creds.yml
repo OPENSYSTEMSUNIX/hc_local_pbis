@@ -1,0 +1,4 @@
+---
+  - vars:
+      domain_user: a058384-aa@harlandclarke.local
+      domain_pass: PASSWORD
