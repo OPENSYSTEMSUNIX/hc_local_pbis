@@ -2,7 +2,7 @@
 # tasks file for pbis
   - name: Redhat | yum install pbis-open
     yum:
-      name: pbis-open 
+      name: pbis-open
       state: latest
       disable_gpg_check: yes
 
@@ -12,7 +12,7 @@
 
   - name: Join the machine if it is not already on the domain.
     command: /usr/bin/domainjoin-cli join {{ domain_fqdn }} {{ domain_user }} {{ domain_pass }}
-    when: domain_status.rc != 0
+    when: domain_status.rc >= 1
     notify:
       - config pbis shell
       - config pbis domain
