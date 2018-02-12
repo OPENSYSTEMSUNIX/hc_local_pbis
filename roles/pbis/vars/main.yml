@@ -12,3 +12,4 @@ homedir_template: "%H/%U"
 login_shell_template: "/bin/bash"
 assume_default_domain: "True"
 require_membership_of: '"HARLANDCLARKE\\aix_admins" "HARLANDCLARKE\\another-group"'
+space_replacement: "_"

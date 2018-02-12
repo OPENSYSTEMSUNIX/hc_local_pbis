@@ -11,3 +11,6 @@
 
   - name: config pbis userdomainprefix
     command: /opt/pbis/bin/config UserDomainPrefix {{ domain_netbios }}
+
+  - name: config pbis SpaceReplacement
+    command: /opt/pbis/bin/config SpaceReplacement {{ space_replacement }}
