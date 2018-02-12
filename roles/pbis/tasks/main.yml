@@ -8,6 +8,7 @@
 
   - name: Check the Domain status
     shell: /opt/pbis/bin/get-status | grep -q "{{ domain_netbios }}"
+    ignore_errors: yes
     register: domain_status
 
   - name: Join the machine if it is not already on the domain.
