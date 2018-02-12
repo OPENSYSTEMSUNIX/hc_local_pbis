@@ -4,12 +4,12 @@
     yum: name=pbis-open state=latest
 
   - name: Check the Domain status
-    shell: /opt/pbis/bin/get-status | grep -Po "\[Domain: {{ domain_netbios }}]"
+    shell: /opt/pbis/bin/get-status | grep -q "{{ domain_netbios }}"
     register: domain_status
 
   - name: Join the machine if it is not already on the domain.
     command: /usr/bin/domainjoin-cli join {{ domain_fqdn }} {{ domain_user }} {{ domain_pass }}
-    when: domain_status.stdout != ""
+    when: domain_status.rc != 0
     notify:
       - config pbis shell
       - config pbis domain
