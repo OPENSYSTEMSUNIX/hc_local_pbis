@@ -1,7 +1,10 @@
 ---
 # tasks file for pbis
   - name: Redhat | yum install pbis-open
-    yum: name=pbis-open state=latest
+    yum:
+      name: pbis-open 
+      state: latest
+      disable_gpg_check: yes
 
   - name: Check the Domain status
     shell: /opt/pbis/bin/get-status | grep -q "{{ domain_netbios }}"
