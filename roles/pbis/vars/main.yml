@@ -4,8 +4,6 @@
 # Domain settings / Account
 domain_fqdn: harlandclarke.local
 domain_netbios: HARLANDCLARKE
-domain_user: USERNAME
-domain_pass: PASSWORD
 
 # Config settings
 homedir_template: "%H/%U"
