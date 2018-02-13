@@ -13,7 +13,7 @@
 
   - name: Join the machine if it is not already on the domain.
     command: /usr/bin/domainjoin-cli join {{ domain_fqdn }} {{ domain_user }} {{ domain_pass }}
-    when: domain_status.rc >= 1
+    when: domain_status.rc != 0
     notify:
       - config pbis shell
       - config pbis domain
