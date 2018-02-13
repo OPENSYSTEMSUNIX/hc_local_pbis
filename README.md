@@ -1,5 +1,5 @@
 # harlandclarke.local pbis install
-==================================
+======================================
 
 Ansible playbook for deploying PowerBroker Identity Services (PBIS) Open Edition for Enterprise Linux
 
@@ -16,5 +16,5 @@ Ansible playbook for deploying PowerBroker Identity Services (PBIS) Open Edition
 * `require_membership_of:` List of domain groups for allowed access
 * `space_replacement:` Configure the character to replace spaces
 
-##todo
+## todo
 create service account for domain joins
