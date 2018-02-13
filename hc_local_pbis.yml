@@ -1,10 +1,7 @@
 ---
 
 # file: hc_local_pbis.yml
- - import_playbook: ad_creds.yml
  - hosts: testing
    become: yes
-   vars:
-      requiremembershipof: '"HARLANDCLARKE\\aix_admins" "HARLANDCLARKE\\aix_admin_val"'
    roles:
        - pbis
