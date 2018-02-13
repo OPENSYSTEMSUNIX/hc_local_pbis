@@ -19,6 +19,7 @@
       - config pbis domain
       - config pbis homedirtemplate
       - config pbis userdomainprefix
+      - config pbis SpaceReplacement
 
   - name: config pbis requiremembershipof
     command: /opt/pbis/bin/config RequireMembershipOf {{ require_membership_of }}
