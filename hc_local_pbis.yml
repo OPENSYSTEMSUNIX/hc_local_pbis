@@ -1,7 +1,7 @@
 ---
 
 # file: hc_local_pbis.yml
- - hosts: testing
+ - hosts: all
    become: yes
    roles:
        - pbis
