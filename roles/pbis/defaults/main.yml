@@ -19,3 +19,4 @@ login_shell_template: "/bin/bash"
 assume_default_domain: "True"
 require_membership_of: '"HARLANDCLARKE\\aix_admins" "HARLANDCLARKE\\aix_admin_val"'
 space_replacement: "_"
+ou: "Unix"
