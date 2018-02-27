@@ -9,8 +9,8 @@ Ansible playbook for deploying PowerBroker Identity Services (PBIS) Open Edition
 
 | variable | value|
 |----------|------|
-| `domain_user:` | domain user with granted add/remove computers to the domain  | 
-| `domain_pass:` | password |
+| `username:` | domain user with granted add/remove computers to the domain  | 
+| `password:` | password |
 | `domain_fqdn:` | Full qualified domain name of your domain |
 | `domain_netbios:` | NetBIOS domain name |
 | `homedir_template:` | homedir to be created for logging in users |
